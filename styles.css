@@ -342,7 +342,7 @@ body {
 }
 
 .proposal-indigo { border-left-color: var(--color-primario); }
-.proposal-amber { border-left-color: #b45309; }
+.proposal-amber { border-left-color: #48b409; }
 .proposal-emerald { border-left-color: #047857; }
 
 .proposal-item h3 {
@@ -443,8 +443,8 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #f59e0b; /* Borde naranja */
-    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+    border-color: #61f50b; /* Borde naranja */
+    box-shadow: 0 0 0 3px rgba(11, 245, 81, 0.3);
     background-color: #fefce8; /* Fondo amarillo muy suave */
 }
 /* ==========================================
@@ -503,7 +503,7 @@ body {
 .btn-contact {
   width: 100%;
   padding: 0.85rem 1.5rem;
-  background-color: #f59e0b;
+  background-color: #0bf5bb;
   color: #ffffff;
   border: none;
   border-radius: var(--radio-borde);
@@ -516,7 +516,7 @@ body {
 }
 
 .btn-contact:hover {
-  background-color: #d97706;
+  background-color: #07be81;
   transform: translateY(-1px);
 }
 
