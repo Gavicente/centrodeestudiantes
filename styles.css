@@ -39,6 +39,155 @@ body {
   outline-offset: 3.5px;
 }
 
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(6px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* ==========================================
+RESPONSIVE DESKTOP (Media Queries)
+========================================== /
+
+@media (min-width: 768px) {
+/ 1. Expandir el contenedor principal a formato PC /
+.mobile-container {
+max-width: 1100px;
+margin-top 2rem
+margin-bottom 2rem;
+border-radius: 1rem;
+}
+
+/* 2. Cabecera: Logo y título a la izquierda, menú a la derecha */
+.sticky-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.header-content {
+    padding: 1rem 0;
+}
+
+.nav-horizontal {
+    padding: 0;
+    margin: 0;
+}
+
+/* 3. Ajuste de imágenes para PC (sin distorsionarse) */
+.hero-image {
+    height: 380px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-image {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 4. Sección Inicio: Características lado a lado */
+.card-hero .card-body {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+}
+
+.feature-item {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+/* 5. Actividades: Grilla de 3 columnas */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card-activity {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 6. Propuestas: Grilla de 3 columnas */
+#propuestas .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.proposal-item {
+    margin-bottom: 0;
+    background-color: var(--color-superficie);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--color-borde);
+    border-left: 4px solid var(--color-primario);
+}
+
+.proposal-amber { border-left-color: #b45309; }
+.proposal-emerald { border-left-color: #047857; }
+
+/* 7. Logros: Pasos en 2 columnas */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+}
+
+/* 8. Equipo: 4 columnas en lugar de 2 */
+.team-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+/* 9. Ubicación: Mapa y texto lado a lado */
+#ubicacion .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#ubicacion .feature-item {
+    flex: 1;
+    margin-bottom: 0 !important;
+}
+
+#ubicacion iframe {
+    flex: 1;
+    margin-bottom: 0 !important;
+    height: 350px;
+}
+
+/* 10. Pie de página redondeado abajo */
+.footer-principal {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    margin-top: 2rem;
+}
+
+
 /* ==========================================
    CONTENEDOR MOBILE (Adaptabilidad vertical)
    ========================================== */
@@ -53,6 +202,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 
 /* ==========================================
    HEADER Y NAVEGACIÓN FLEXBOX
