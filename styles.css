@@ -528,3 +528,13 @@ body {
   pointer-events: none;
   transition: all 0.3s ease-in-out;
 }
+@media (min-width: 768px) {
+    /* 1. Liberamos el contenedor para que ocupe el 100% de la pantalla */
+    .mobile-container {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
