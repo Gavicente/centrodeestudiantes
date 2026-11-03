@@ -402,7 +402,51 @@ body {
   font-size: 0.85rem;
   color: var(--color-texto-suave);
 }
+/* ==========================================
+   DISEÑO DEL FORMULARIO DE CONTACTO
+   ========================================== */
+.form-participar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    text-align: left;
+    margin-top: 1.5rem;
+}
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #e0f2fe; /* Celeste claro para máximo contraste sobre el fondo azul */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: 2px solid #7dd3fc;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #0f172a;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+/* Efecto visual al hacer clic para escribir (Accesibilidad) */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #f59e0b; /* Borde naranja */
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+    background-color: #fefce8; /* Fondo amarillo muy suave */
+}
 /* ==========================================
    EQUIPO Y CALL TO ACTION
    ========================================== */
