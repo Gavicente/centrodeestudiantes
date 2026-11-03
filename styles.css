@@ -50,16 +50,26 @@ transform: translateY(0);
 }
 }
 
-/* ==========================================
-RESPONSIVE DESKTOP (Media Queries)
-========================================== /
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(6px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
 
+/* ==========================================
+11. RESPONSIVE DESKTOP (Media Queries)
+========================================== */
 @media (min-width: 768px) {
-/ 1. Expandir el contenedor principal a formato PC /
+/* 1. Expandir el contenedor principal a formato PC */
 .mobile-container {
-max-width: 1100px;
-margin-top 2rem
-margin-bottom 2rem;
+max-width: 1100px; 
+margin-top: 2rem;
+margin-bottom: 2rem;
 border-radius: 1rem;
 }
 
@@ -186,7 +196,6 @@ border-radius: 1rem;
     border-bottom-right-radius: 1rem;
     margin-top: 2rem;
 }
-
 
 /* ==========================================
    CONTENEDOR MOBILE (Adaptabilidad vertical)
