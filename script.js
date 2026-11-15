@@ -69,13 +69,25 @@ window.addEventListener('load', function() {
 });
 // Función para procesar el envío del formulario de participación
 function enviarFormulario(event) {
-    event.preventDefault(); // Evita que la página se recargue
+    event.preventDefault();
+    const form = event.target;
+    const nombre = form.nombre.value.trim();
+    const curso = form.curso.value.trim();
+    const mensaje = form.mensaje.value.trim();
 
-    const nombre = document.getElementById('nombre').value;
-    
-    // Generar mensaje personalizado de confirmación
-    const mensaje = `¡Gracias ${nombre}! Recibimos tu propuesta. Nos contactaremos con vos durante el recreo.`;
-    
+    if (!nombre || !curso || !mensaje) {
+        mostrarAviso('Por favor, completá todos los campos.');
+        return;
+    }
+
+    const destinatario = 'centrodeestudiantes.ees63@gmail.com'; // Cambiar por el mail real
+    const asunto = encodeURIComponent(`Propuesta CE - ${nombre} (${curso})`);
+    const cuerpo = encodeURIComponent(`Nombre: ${nombre}\nCurso: ${curso}\n\nMensaje:\n${mensaje}`);
+
+    mostrarAviso(`Abriendo tu correo para enviar la propuesta de ${nombre}...`);
+    form.reset();
+    window.location.href = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+}
     // Reutilizar o crear el toast de notificación
     let toast = document.getElementById('toast-notificacion');
     if (!toast) {
