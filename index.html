@@ -196,7 +196,7 @@
                 <h2>¡Sumate a Participar!</h2>
                 <p>El Centro lo construimos colectivamente. Si tenés una consulta, reclamo o querés proponer una actividad para tu curso, dejanos tus datos:</p>
                 
-                <form class="form-participar" action="#" method="POST">
+                <form class="form-participar" id="form-contacto" onsubmit="enviarFormulario(event)">
     <div class="form-group">
         <label for="nombre">Nombre y Apellido</label>
         <input type="text" id="nombre" name="nombre" placeholder="Ej. Lucía Pérez" required>
@@ -212,8 +212,9 @@
         <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos tu idea o reclamo..." required></textarea>
     </div>
     
-    <button type="button" class="btn-contact" onclick="contactar()">Enviar mensaje</button>
+    <button type="submit" class="btn-contact">Enviar mensaje</button>
 </form>
+
             </div>
         </aside>
 <section id="faq" class="section fade-in">
